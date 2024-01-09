@@ -24,3 +24,20 @@ for i in range(6):
 # If user entered turtle color set race start equal ture
 if user_bet:
     is_race_start = True
+
+# Loop until is race start is false
+while is_race_start:
+    for turtle in all_turtles:
+        # Declared the winner if turtle exceed x > 270
+        if turtle.xcor() > 270:
+            winning_color = turtle.pencolor()
+            if winning_color == user_bet:
+                print(f"You've won! The {winning_color} turtle is winner!!")
+            else:
+                print(f"You've lose. The {winning_color} turtle won!!")
+            is_race_start = False
+        # Generate random distance and each turtle move randomly
+        random_distance = random.randint(0, 10)
+        turtle.forward(random_distance)
+
+screen.exitonclick()
