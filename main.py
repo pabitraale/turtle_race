@@ -21,3 +21,6 @@ for i in range(6):
     new_turtle.color(colors[i])
     new_turtle.goto(-250, y[i])
     all_turtles.append(new_turtle)
+# If user entered turtle color set race start equal ture
+if user_bet:
+    is_race_start = True
